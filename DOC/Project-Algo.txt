@@ -1,0 +1,28 @@
+1st --> Add two dependencies
+i) Mysql Connector
+ii)Hibernate Core
+{
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.6.12.Final</version>
+		</dependency>
+}.
+
+
+2 --> Create POJO Class (Employee)
+3 --> Create a Main class and create a persistent object.
+
+
+4--> Create a Mapping file(xml).
+Add DTD file.
+
+5--> Create a Configuration file(xml).
+Add DTD file.
+
