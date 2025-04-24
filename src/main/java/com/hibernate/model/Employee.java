@@ -1,9 +1,11 @@
 package com.hibernate.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 
 @Entity
@@ -16,7 +18,8 @@ public class Employee {
 	private String gender;
 	private int salary;
 	
-	@OneToOne
+	@OneToOne(cascade =  CascadeType.ALL)
+	@JoinColumn(name = "add_id")
 	private Address address;
 	
 	

@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Transient;
 
 @Entity
 public class Address {
@@ -12,9 +13,10 @@ public class Address {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String city, state;
+	@Transient
 	private String country;
 	
-	@OneToOne
+	@OneToOne(mappedBy = "address")
 	private Employee employee;
 	
 	public Address() {
