@@ -18,7 +18,7 @@ public class Employee {
 	private String gender;
 	private int salary;
 
-	@OneToMany
+	@OneToMany(mappedBy = "employee")
 	private List<Address> addresses;
 
 	public Employee() {
